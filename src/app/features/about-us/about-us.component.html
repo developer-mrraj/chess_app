@@ -1,0 +1,40 @@
+<section id="about" class="py-5">
+  <div class="container">
+
+    <!-- Intro -->
+    <div class="text-center mb-5">
+      <h2 class="text-accent mb-2">{{ aboutIntro.title }}</h2>
+      <p class="lead text-dark-50">{{ aboutIntro.subtitle }}</p>
+    </div>
+
+    <!-- Philosophy Section -->
+    <div class="row align-items-center mb-5 gy-4 flex-column-reverse flex-lg-row">
+      <div class="col-lg-6">
+        <h3 class="text-highlight mb-3">{{ aboutIntro.philosophyTitle }}</h3>
+        <p>{{ aboutIntro.philosophyDesc }}</p>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="../../../assets/premium-chess-image.png" alt="Kids playing chess" class="img-fluid rounded-3 shadow-lg" style="max-height: 400px; object-fit: cover;">
+      </div>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Features -->
+    <div class="row mb-5">
+      <div class="col-12 text-center mb-4">
+        <h3 class="text-highlight">What Makes Us Stand Out?</h3>
+      </div>
+
+      <div *ngFor="let feature of features" class="col-md-6 col-lg-3 mb-4">
+        <div class="card h-100 text-center rounded-3 shadow-lg feature-card p-4" [ngStyle]="{'background': feature.gradientBg}">
+          <i [class]="feature.icon + ' display-5 mb-3 text-' + feature.colorClass"></i>
+          <h4 class="fw-semibold">{{ feature.title }}</h4>
+          <p>{{ feature.desc }}</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>

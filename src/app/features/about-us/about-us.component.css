@@ -1,0 +1,48 @@
+#about {
+  padding: 5rem 1rem;
+  background: linear-gradient(to bottom, #fff8e7 0%, #ffffff 100%);
+}
+
+/* Feature Cards */
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-dark);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+/* Team Cards */
+.hover-team {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-team:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+/* Icon Animation */
+.card i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card:hover i {
+  transform: rotate(10deg) scale(1.2);
+  color: var(--highlight);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #about {
+    padding: 3rem 1rem;
+  }
+  .feature-card {
+    padding: 2rem 1rem;
+  }
+  .hover-team {
+    padding: 2rem 1rem;
+  }
+}

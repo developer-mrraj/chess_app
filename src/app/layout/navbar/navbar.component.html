@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg bg-white shadow-sm ">
+  <div class="container">
+    
+    <!-- Logo for desktop -->
+    <a class="navbar-brand fw-bold d-none d-lg-block" href="#">
+      <img src="../../../assets/chess-hero-image.png" width="40" class="me-2">
+    </a>
+
+    <!-- Logo + Toggle for mobile -->
+    <div class="d-flex justify-content-between align-items-center w-100 d-lg-none">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="../../../assets/chess-hero-image.png" width="40" class="me-2">
+      </a>
+      <!-- Toggle -->
+      <button class="navbar-toggler border-0" type="button" (click)="toggleNavbar()">
+        <span [class.open]="isOpen" class="custom-toggler"></span>
+      </button>
+    </div>
+
+    <!-- Middle: Nav Links -->
+    <div class="mobile-menu d-lg-flex" [class.open]="isOpen">
+      <ul class="navbar-nav mb-2 mb-lg-0" (click)="closeNavbar()">
+        <li class="nav-item"><a class="nav-link px-3" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="#why-us">Features</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="#qa">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Right: Call Now Button -->
+    <div class="d-none d-lg-block">
+      <a href="tel:+919420172303" class="btn btn-callnow">📞 Call Now</a>
+    </div>
+  </div>
+</nav>

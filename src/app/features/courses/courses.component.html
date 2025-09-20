@@ -1,0 +1,28 @@
+<section id="courses" class="py-5">
+  <div class="container">
+
+    <!-- Intro -->
+    <div class="text-center mb-5">
+      <h2 class="text-accent mb-2">{{ intro.title }}</h2>
+      <p class="lead text-dark-50">{{ intro.subtitle }}</p>
+    </div>
+
+
+    <hr class="my-5">
+
+    <div class="row g-4 justify-content-center">
+      <div *ngFor="let course of courses" class="col-md-6 col-lg-4">
+        <div class="card course-card h-100 rounded-3 shadow-lg p-4" [ngStyle]="{'background': course.gradientBg}">
+          <h4 class="card-title text-{{ course.color }} mb-3">{{ course.title }}</h4>
+          <ul class="list-unstyled fw-semibold curriculum-list mb-4">
+            <li *ngFor="let item of course.highlights">
+              <i class="bi bi-check-circle-fill text-accent me-2"></i>{{ item }}
+            </li>
+          </ul>
+          <button class="btn btn-highlight w-100">{{ course.cta }}</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

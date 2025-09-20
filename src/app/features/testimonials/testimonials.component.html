@@ -1,0 +1,28 @@
+<section id="testimonials" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="text-accent mb-2">What Parents Say</h2>
+      <p class="lead text-dark-50">Don't just take our word for it. Hear from the parents who have seen their children thrive.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-4" *ngFor="let t of testimonials">
+        <div class="testimonial-card p-4 rounded-4 shadow-lg position-relative">
+          <div class="quote-icon">❝</div>
+          <p class="testimonial-quote">{{ t.quote }}</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <div class="fw-bold text-highlight">{{ t.parentName }}</div>
+            <div class="text-muted small">{{ t.childName }}</div>
+          </div>
+          <div class="rating-stars mt-2">
+            <ng-container *ngFor="let s of [].constructor(t.rating)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#FFD700" class="bi bi-star-fill me-1" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73-3.523-3.356c-.329-.314-.158-.888.283-.95l4.898-.696 2.184-4.423c.197-.398.73-.398.927 0l2.184 4.423 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

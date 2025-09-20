@@ -1,0 +1,105 @@
+/* Custom utility classes based on global variables */
+.text-primary { color: var(--primary) !important; }
+.text-secondary { color: var(--secondary) !important; }
+.text-accent { color: var(--accent) !important; }
+.text-highlight { color: var(--highlight) !important; }
+.text-dark-50 { color: #6c757d !important; } /* A bit softer than full text-dark */
+
+.bg-primary-light { background-color: #e3f2fd; }
+.bg-secondary-light { background-color: #fff3e0; }
+.bg-accent-light { background-color: #e8f5e9; }
+.bg-highlight-light { background-color: #ffe0b2; }
+
+/* Main Section */
+#home {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+/* Hero Image */
+#home img {
+  max-height: 500px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+#home img:hover {
+  transform: scale(1.03) rotate(-1deg);
+}
+
+/* Call to Action Button */
+.btn-highlight {
+  background-color: var(--highlight);
+  color: var(--text-light);
+  font-weight: 600;
+  border-radius: 2rem;
+  padding: 0.8em 1.5em;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-highlight:hover {
+  background-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* What We Offer Section */
+.what-we-offer {
+  margin-top: 5rem;
+}
+
+.offer-icon-box {
+  width: 70px;
+  height: 70px;
+  border: 3px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.offer-icon-box:hover {
+  border-color: var(--highlight);
+}
+
+.offer-icon-box i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.offer-icon-box:hover i {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  #home {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+
+  /* Adjustments for the image on mobile */
+  #home .row {
+    flex-direction: column-reverse; /* Stack image above text */
+  }
+
+  #home img {
+    height: auto;
+    max-height: 300px;
+    /* margin-top: 2rem; */
+  }
+
+  /* Heading sizes */
+  #home h1 {
+    font-size: 2.2rem;
+    margin-top: 1rem;
+  }
+
+  #home h4 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  #home p.lead {
+    font-size: 1rem;
+  }
+}

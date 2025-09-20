@@ -1,0 +1,49 @@
+/* Main Section */
+#why-us {
+  padding: 5rem 1rem;
+}
+
+/* Card Styling */
+.card {
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Icon Circle */
+.icon-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transition: transform 0.4s ease-in-out;
+}
+
+.icon-circle:hover {
+  transform: scale(1.15) rotate(-10deg);
+}
+
+.icon-circle i {
+  transition: transform 0.4s, color 0.3s ease-in-out;
+}
+
+.card:hover .icon-circle i {
+  transform: rotate(15deg) scale(1.2);
+  color: var(--highlight) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #why-us {
+    padding: 3rem 1rem;
+  }
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+  }
+}

@@ -1,0 +1,122 @@
+/* General Navbar */
+.navbar {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand {
+  font-family: 'Baloo Bhai 2', cursive;
+  font-size: 1.5rem;
+  color: var(--primary) !important;
+  margin-top: 12px;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Call Now Button */
+.btn-callnow {
+  background-color: var(--highlight);
+  color: var(--text-light);
+  font-weight: 600;
+  border-radius: 2rem;
+  padding: 0.6em 1.2em;
+}
+.btn-callnow:hover {
+  background-color: var(--accent);
+}
+
+/* Hamburger Animation */
+.custom-toggler {
+  position: relative;
+  width: 25px;
+  height: 2px;
+  background: var(--primary);
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+.custom-toggler::before,
+.custom-toggler::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background: var(--primary);
+  transition: all 0.3s ease-in-out;
+}
+.custom-toggler::before {
+  top: -7px;
+}
+.custom-toggler::after {
+  top: 7px;
+}
+
+/* When open */
+.custom-toggler.open {
+  background: transparent;
+}
+.custom-toggler.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.custom-toggler.open::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Smooth collapse - only for mobile/tablet */
+/* Custom mobile menu animation */
+@media (max-width: 991px) {
+  .mobile-menu {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+
+  .mobile-menu.open {
+    max-height: 500px; /* enough for your links */
+    opacity: 1;
+  }
+
+  /* Animate nav links */
+  .navbar-nav .nav-link {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .mobile-menu.open .nav-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  
+}
+
+/* Remove Bootstrap's default green/black style from navbar toggler */
+.navbar-toggler {
+  border: none !important;              /* remove black border */
+  outline: none !important;             /* remove outline */
+  box-shadow: none !important;          /* remove bootstrap blue glow */
+  background: transparent !important;   /* no background */
+  padding: 0.25rem 0.5rem;              /* cleaner spacing */
+}
+
+/* Prevent green background when clicked */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+

@@ -1,0 +1,67 @@
+.quote-slider {
+  overflow: hidden;
+  padding: 2rem 0;
+  background: var(--background);
+}
+
+.slider-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll-left 40s linear infinite;
+  width: max-content;
+}
+
+.card {
+  flex: 0 0 auto;
+  min-width: 300px;
+  max-width: 350px;
+  height: 220px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: var(--secondary);
+  color: var(--text-dark);
+  font-size: var(--fs-sub);
+  font-family: 'Baloo Bhai 2', cursive;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1.5;
+}
+
+/* Icon */
+.chess-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+/* Infinite scroll (desktop + base) */
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* move exactly one set */
+}
+
+/* 🔹 Mobile View */
+@media (max-width: 768px) {
+  .slider-track {
+    gap: 1rem; /* 🚀 Remove gap so no blank space appears */
+    animation: scroll-left-mobile 20s linear infinite;
+  }
+
+  .card {
+    padding: 2rem 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .chess-icon {
+    font-size: 2rem;
+  }
+
+  @keyframes scroll-left-mobile {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* move by one set only */
+  }
+}

@@ -1,1 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  /* Colors */
+  --primary: #4AA8F0;      /* Sky Blue */
+  --secondary: #FFD93D;    /* Sun Yellow */
+  --accent: #4CAF50;       /* Fresh Green */
+  --highlight: #FF7043;    /* Coral Orange */
+  --background: #FFF8E7;   /* Soft Cream */
+  --text-dark: #333333;
+  --text-light: #ffffff;
+
+  /* Font sizes */
+  --fs-hero: 3rem;     /* 48px */
+  --fs-heading: 2rem;  /* 32px */
+  --fs-sub: 1.25rem;   /* 20px */
+  --fs-body: 1rem;     /* 16px */
+  --fs-button: 1.1rem; /* 18px */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--fs-body);
+  color: var(--text-dark);
+  background-color: var(--background);
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: 'Baloo Bhai 2', cursive;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: var(--fs-hero);
+  color: var(--primary);
+}
+
+h2 {
+  font-size: var(--fs-heading);
+  color: var(--accent);
+}
+
+h3 {
+  font-size: var(--fs-sub);
+  color: var(--highlight);
+}
+
+/* Buttons */
+button, .btn {
+  font-size: var(--fs-button);
+  font-weight: 600;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-color: var(--highlight);
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--accent);
+}
+
+/* Sections
+section {
+  padding: 4rem 2rem;
+} */
+
+section:nth-child(even) {
+  background-color: #ffffff; /* alternate white */
+}
+
+section:nth-child(odd) {
+  background-color: var(--background); /* alternate cream */
+}
+
+/* Centering content */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+.mt-2 { margin-top: 1rem; }
+.mt-4 { margin-top: 2rem; }

@@ -1,0 +1,109 @@
+#courses {
+  padding: 5rem 1rem;
+}
+
+/* Benefit Cards */
+/* Benefit Cards */
+.benefit-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff8e7, #ffe6b3);
+  border-radius: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Chess Icon Styling */
+.chess-icon {
+  font-size: 2.5rem;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+/* Hover animation: spin and jump */
+.benefit-card:hover .chess-icon {
+  transform: rotate(-15deg) scale(1.3) translateY(-5px);
+  color: var(--highlight) !important;
+}
+
+/* Gradient background options for dynamic fun */
+.benefit-card:nth-child(1) { background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); }
+.benefit-card:nth-child(2) { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); }
+.benefit-card:nth-child(3) { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); }
+.benefit-card:nth-child(4) { background: linear-gradient(135deg, #fff0f0 0%, #ffcccc 100%); }
+.benefit-card:nth-child(5) { background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); }
+.benefit-card:nth-child(6) { background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%); }
+
+/* Paragraph text */
+.benefit-card p {
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+.benefit-card:hover p {
+  color: var(--primary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .benefit-card {
+    padding: 1.5rem 1rem;
+  }
+  .chess-icon {
+    font-size: 2rem;
+  }
+}
+
+
+/* Course Cards */
+.course-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  color: var(--text-dark);
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+  filter: brightness(1.05);
+}
+
+.curriculum-list li {
+  margin-bottom: 0.75rem;
+}
+
+.curriculum-list li i {
+  color: var(--accent);
+}
+
+/* CTA Button */
+.btn-highlight {
+  background-color: var(--highlight);
+  color: var(--text-light);
+  font-weight: 600;
+  border-radius: 2rem;
+  padding: 0.75em 1em;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-highlight:hover {
+  background-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #courses {
+    padding: 3rem 1rem;
+  }
+  .benefit-card, .course-card {
+    padding: 2rem 1rem;
+  }
+}
