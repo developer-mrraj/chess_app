@@ -1,7 +1,9 @@
 /* General Navbar */
 .navbar {
+  /* z-index: 1050; stays above other elements */
   font-family: 'Poppins', sans-serif;
 }
+
 
 .navbar-brand {
   font-family: 'Baloo Bhai 2', cursive;
