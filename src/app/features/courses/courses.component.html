@@ -7,7 +7,6 @@
       <p class="lead text-dark-50">{{ intro.subtitle }}</p>
     </div>
 
-
     <hr class="my-5">
 
     <div class="row g-4 justify-content-center">
@@ -19,10 +18,43 @@
               <i class="bi bi-check-circle-fill text-accent me-2"></i>{{ item }}
             </li>
           </ul>
-          <button class="btn btn-highlight w-100">{{ course.cta }}</button>
+          <!-- Enroll Button triggers modal -->
+          <button class="btn btn-highlight w-100" data-bs-toggle="modal" data-bs-target="#contactModal">
+            {{ course.cta }}
+          </button>
         </div>
       </div>
     </div>
 
   </div>
 </section>
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow-lg border-0">
+
+      <!-- Header -->
+      <div class="modal-header bg-gradient text-white rounded-top-4">
+        <h5 class="modal-title fw-bold text-dark" id="contactModalLabel">📞 Contact Us</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body text-center py-4">
+        <p class="lead fw-semibold">Call our tutors directly for quick enrollment.</p>
+
+        <div class="contact-card mb-3 p-3 rounded-3 shadow-sm">
+          <h6 class="fw-bold mb-1 text-dark">Bhushan S. Namale</h6>
+          <a href="tel:+919422303000" class="btn btn-success w-100">📞 9420172303</a>
+        </div>
+
+        <div class="contact-card p-3 rounded-3 shadow-sm">
+          <h6 class="fw-bold mb-1 text-dark">Raj V. Bhandari</h6>
+          <a href="tel:+917387500000" class="btn btn-success w-100">📞 7387792415</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

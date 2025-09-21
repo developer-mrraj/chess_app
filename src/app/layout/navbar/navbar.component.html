@@ -1,16 +1,16 @@
-<nav class="navbar navbar-expand-lg bg-white shadow-sm ">
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
   <div class="container">
     
     <!-- Logo for desktop -->
     <a class="navbar-brand fw-bold d-none d-lg-block" href="#">
-      <img src="../../../assets/chess-hero-image.png" width="40" class="me-2">
+      <img src="../../../assets/shunyojay_logo.png" width="40" style="height: 4rem;width:4rem;" >
     </a>
 
     <!-- Logo + Toggle for mobile -->
     <div class="d-flex justify-content-between align-items-center w-100 d-lg-none">
       <!-- Logo -->
       <a class="navbar-brand fw-bold" href="#">
-        <img src="../../../assets/chess-hero-image.png" width="40" class="me-2">
+        <img src="../../../assets/shunyojay_logo.png" width="40" style="height: 4rem;width:4rem;">
       </a>
       <!-- Toggle -->
       <button class="navbar-toggler border-0" type="button" (click)="toggleNavbar()">
@@ -28,11 +28,17 @@
         <li class="nav-item"><a class="nav-link px-3" href="#testimonials">Testimonials</a></li>
         <li class="nav-item"><a class="nav-link px-3" href="#qa">FAQ</a></li>
       </ul>
+
+      <!-- Call Now Button for Mobile (inside dropdown) -->
+      <div class="d-block d-lg-none mt-3 text-center">
+        <a href="tel:+919420172303" class="btn btn-callnow w-100">📞 Call Now</a>
+      </div>
     </div>
 
-    <!-- Right: Call Now Button -->
+    <!-- Right: Call Now Button for Desktop -->
     <div class="d-none d-lg-block">
       <a href="tel:+919420172303" class="btn btn-callnow">📞 Call Now</a>
     </div>
+
   </div>
 </nav>
